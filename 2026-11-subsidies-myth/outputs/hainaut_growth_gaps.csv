@@ -1,0 +1,7 @@
+comparator,window,gap_before,gap_during,gap_after,did_during_minus_before
+Liege,"before 1980-1993, during 1993-2006, after 2006-2024",-0.43,0.01,-0.31,0.44
+Rest of Wallonia ex BW,"before 1980-1993, during 1993-2006, after 2006-2024",-0.55,-0.06,-0.2,0.49
+Flanders,"before 1980-1993, during 1993-2006, after 2006-2024",-0.6,-0.75,-0.47,-0.15
+Belgium,"before 1980-1993, during 1993-2006, after 2006-2024",-0.55,-0.53,-0.32,0.02
+Rest of Wallonia ex BW,before starts 1985,0.21,-0.06,-0.2,-0.26
+Rest of Wallonia ex BW,before starts 1989,-0.16,-0.06,-0.2,0.1

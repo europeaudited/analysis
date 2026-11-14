@@ -1,0 +1,44 @@
+name: Something's wrong
+description: Tell us about an error in a published piece, chart, number or sentence.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. We rerun the analysis and reply. Please do not include personal information.
+  - type: input
+    id: piece
+    attributes:
+      label: Which piece?
+      description: The folder name or the title, for example 2026-11-belgium-deficit.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong?
+      description: State the error in one or two sentences.
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where? (file, chart or sentence)
+      description: For example outputs/theme_bridge.csv, charts/03_no_single_fix.png, or the sentence you mean.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it wrong?
+      description: Explain the reasoning. What should it say instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source or evidence
+      description: Link to a dataset, table or study. Say which table and year.
+    validations:
+      required: true

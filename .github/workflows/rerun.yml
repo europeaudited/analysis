@@ -1,0 +1,65 @@
+name: Rerun analyses
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * 1"   # Mondays 05:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    name: Rerun from cached data and check outputs reproduce
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Offline tests for the data pipelines
+        run: python -m unittest discover -s tests -v
+      - name: Verify checksums of cached raw data
+        run: |
+          for d in */data; do
+            (cd "$d" && sha256sum -c MANIFEST.sha256)
+          done
+      - name: Rerun every piece with cached data
+        run: |
+          for f in */run.py; do
+            echo "== $f"
+            python "$f"
+          done
+      - name: Outputs must reproduce exactly
+        run: git diff --exit-code -- '*/outputs/*.csv'
+
+  refresh:
+    name: Refresh from official APIs (does not commit)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Rerun every piece with freshly downloaded data
+        run: |
+          for f in */run.py; do
+            echo "== $f"
+            python "$f" --refresh
+          done
+      - name: Show what changed against the committed files
+        run: git status --short && git diff --stat || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: refreshed-outputs
+          path: |
+            */outputs/
+            */charts/
+            */data/raw/
+            */data/MANIFEST.sha256
