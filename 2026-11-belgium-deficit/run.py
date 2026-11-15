@@ -435,6 +435,45 @@ def eu_context():
     assert float(be["deficit_2025"]) == -5.2 and float(be["debt_2025"]) == 108.1
 
 
+def chart_deficit_history():
+    """Belgium and the Netherlands, budget balance 2009 to 2027 (AMECO; 2026-27 are forecasts)."""
+    rows = list(csv.reader(open(cache.verified_path(RAW / "ameco_fiscal_cycle_BE_NL_DE.csv"))))
+    head = rows[0]
+    years = [int(h[1:]) for h in head[2:]]
+    series = {r[1]: [float(x) for x in r[2:]] for r in rows[1:] if r[0] == "UBLG_pctGDP"}
+    be, nl = series["Belgium"], series["Netherlands"]
+    actual = [y for y in years if y <= 2025]
+    under3 = [y for y, v in zip(years, be) if y <= 2025 and v > -3.0]
+    with open(OUT / "deficit_history.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["year", "belgium_balance_pct_gdp", "netherlands_balance_pct_gdp", "forecast"])
+        for y, b, n in zip(years, be, nl):
+            w.writerow([y, b, n, int(y > 2025)])
+    with open(OUT / "deficit_history_summary.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["measure", "value"])
+        w.writerow(["years_2009_2025", len(actual)])
+        w.writerow(["belgium_years_deficit_below_3pct_2009_2025", len(under3)])
+        w.writerow(["belgium_years_below_3pct", " ".join(map(str, under3))])
+    assert len(actual) == 17 and under3 == [2015, 2016, 2017, 2018, 2019], under3
+    fig = style.frame("Belgium met the 3% limit in 5 of 17 years",
+                      "General government balance, % of GDP, 2009 to 2025; shaded: forecasts",
+                      "Source: European Commission, AMECO. Dashed line: the EU's 3% deficit limit.", figsize=(8, 6))
+    ax = style.main_axes(fig, (0.09, 0.12, 0.86, 0.64))
+    ax.axvspan(2025.5, 2027.4, color=style.GRID, zorder=0)
+    ax.axhline(-3, color=style.DARK, lw=1, ls="--")
+    ax.axhline(0, color=style.LIGHT, lw=1)
+    ax.plot(years, nl, color=style.SECOND, lw=2)
+    ax.plot(years, be, color=style.ACCENT, lw=3)
+    ax.text(2027.5, be[-1], "Belgium", color=style.ACCENT, fontsize=12, fontweight="bold", va="center")
+    ax.text(2027.5, nl[-1], "Netherlands", color=style.SECOND, fontsize=11, va="center")
+    ax.text(2009.2, -2.7, "3% limit", fontsize=10, color=style.DARK)
+    ax.set_xlim(2008.5, 2030); ax.set_ylim(-10, 3)
+    ax.set_xticks([2009, 2012, 2015, 2018, 2021, 2024, 2027])
+    ax.grid(axis="y", color=style.GRID); ax.tick_params(labelsize=10)
+    style.save(fig, CHARTS / "05_deficit_history.png")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--refresh", action="store_true", help="re-download raw data first (needs internet)")
@@ -459,6 +498,7 @@ def main():
     if not args.refresh:
         check_key_numbers(tb, sc, rb)
     eu_context()
+    chart_deficit_history()
     print("done: outputs/ and charts/ written")
 
 
