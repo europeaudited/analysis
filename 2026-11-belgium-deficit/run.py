@@ -501,6 +501,73 @@ def spending_revenue():
     assert be[2025][2] == 54.4 and min(be_rev) == 48.6 and max(be_rev) == 52.7, (be[2025], be_rev)
     assert be[2010][2] == 53.9 and nl[2010][2] == 48.9 and nl[2019][2] == 42.1
     assert [r[2] for r in out if r[0] == "EU27_2020"] == [48.9, 49.4]
+    above = {}
+    for geo in ("BE", "NL", "FR"):
+        bal = {r[1]: r[3] - r[2] for r in out if r[0] == geo}
+        above[geo] = [y for y in range(2009, 2026) if bal[y] < -3.0]
+    with open(OUT / "years_above_3pct.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["geo", "years_2009_2025", "years_deficit_above_3pct", "years_under_3pct"])
+        for geo, ys in above.items():
+            w.writerow([geo, 17, len(ys), " ".join(str(y) for y in range(2009, 2026) if y not in ys)])
+    assert len(above["BE"]) == 12 and len(above["FR"]) == 15, above
+
+
+def chart_belgium_waterfall():
+    """Belgium only: from the 2010 balance to the 2024 balance, driver by driver (theme bridge)."""
+    p = pd.read_csv(OUT / "theme_bridge_summary_2010_2024.csv", index_col=0)["BE"]
+    sr = pd.read_csv(OUT / "spending_revenue.csv")
+    be = sr[sr.geo == "BE"].set_index("year")
+    start = round(float(be.loc[2010, "revenue_pct_gdp"] - be.loc[2010, "spending_pct_gdp"]), 1)
+    steps = [
+        ("Ageing", p["Demography (ageing)"]),
+        ("Spending per\nperson (rules\nand decisions)", p["Spending per beneficiary (policy + drift)"]),
+        ("Economic\ngrowth", p["Growth (jobs, productivity)"]),
+        ("Lower\ninterest", p["Interest"]),
+        ("Taxes and\nother revenue", p["Tax ratio: labour"] + p["Tax ratio: consumption"] + p["Other taxes & non-tax (mixed)"]),
+        ("Business\ncycle", p["Cycle"]),
+    ]
+    end = round(float(be.loc[2024, "revenue_pct_gdp"] - be.loc[2024, "spending_pct_gdp"]), 1)
+    from_steps = round(start + sum(float(v) for _, v in steps), 2)
+    with open(OUT / "belgium_waterfall_2010_2024.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["step", "pp_gdp"])
+        w.writerow(["balance_2010", start])
+        for k, v in steps:
+            w.writerow([k.replace("\n", " "), round(float(v), 2)])
+        w.writerow(["balance_2024_from_steps", from_steps])
+        w.writerow(["balance_2024_actual", end])
+    assert start == -4.1 and end == -4.4 and abs(end - from_steps) <= 0.15, (start, end, from_steps)
+    fig = style.frame("What moved Belgium's budget, 2010 to 2024",
+                      "Budget balance and what changed it, % of GDP (below zero = deficit; down = worse)",
+                      "Sources: Eurostat, AMECO; authors' calculations. Spending per person is real, so it includes indexation\n"
+                      "and other automatic rises as well as policy decisions. Results move with start and end years.",
+                      figsize=(9, 6.4))
+    ax = style.main_axes(fig, (0.08, 0.17, 0.88, 0.58))
+    labels = ["2010\nbalance"] + [k for k, _ in steps] + ["2024\nbalance"]
+    level = start
+    ax.bar(0, start, color=style.SECOND, width=0.6)
+    ax.text(0, start - 0.4, f"{start:.1f}", ha="center", va="top", fontsize=11, fontweight="bold")
+    for i, (_, v) in enumerate(steps, start=1):
+        v = float(v)
+        bottom = level if v >= 0 else level + v
+        ax.bar(i, abs(v), bottom=bottom, color=style.GREY if v >= 0 else style.ACCENT, width=0.6)
+        ax.text(i, bottom + abs(v) + 0.3 if v >= 0 else bottom - 0.3, f"{v:+.1f}",
+                ha="center", va="bottom" if v >= 0 else "top", fontsize=11)
+        ax.plot([i - 0.7, i + 0.3], [level, level], color=style.LIGHT, lw=1, zorder=0)
+        level += v
+    n = len(steps) + 1
+    ax.plot([n - 0.7, n - 0.3], [level, level], color=style.LIGHT, lw=1, zorder=0)
+    ax.bar(n, end, color=style.SECOND, width=0.6)
+    ax.text(n, end - 0.4, f"{end:.1f}", ha="center", va="top", fontsize=11, fontweight="bold")
+    ax.axhline(0, color=style.DARK, lw=1)
+    ax.axhline(-3, color=style.DARK, lw=1, ls="--")
+    ax.text(n + 0.45, -2.8, "3% limit", fontsize=9, va="bottom")
+    ax.set_axisbelow(True)
+    ax.set_xticks(range(n + 1)); ax.set_xticklabels(labels, fontsize=9)
+    ax.set_ylim(-16, 2); ax.set_xlim(-0.6, n + 1.1)
+    ax.grid(axis="y", color=style.GRID); ax.tick_params(axis="y", labelsize=10)
+    style.save(fig, CHARTS / "06_belgium_waterfall.png")
 
 
 def main():
@@ -529,6 +596,7 @@ def main():
     eu_context()
     chart_deficit_history()
     spending_revenue()
+    chart_belgium_waterfall()
     print("done: outputs/ and charts/ written")
 
 
