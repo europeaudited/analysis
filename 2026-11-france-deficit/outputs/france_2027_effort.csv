@@ -1,0 +1,12 @@
+item,pct_gdp,eur_bn,note
+deficit_2026_estimate,5.4,,"government, 1 Oct 2026"
+rise_without_new_measures_2027,1.0,,government press kit: about 1 point
+new_measures_2027,-1.4,43,government; % of 2027 GDP (AMECO)
+deficit_2027_target,5.0,,government
+still_to_find_by_2029_net,-2.0,63,"2027 target minus 2029 target, at 2027 GDP (AMECO)"
+deficit_2029_target,3.0,,government
+commission_forecast_2027,5.69,,"AMECO (Commission forecast, before the 2027 plan)"
+interest_2024_commission,2.05,,"AMECO, % of GDP"
+interest_2025_commission,2.23,,"AMECO, % of GDP"
+interest_2026_commission,2.58,,"AMECO, % of GDP"
+interest_2027_commission,2.78,,"AMECO, % of GDP"
