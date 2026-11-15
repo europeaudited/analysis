@@ -1,0 +1,169 @@
+geo,period,theme,pp_gdp
+FR,2010-2019,1 Demography (ageing),-5.4
+FR,2010-2019,2 Growth: jobs & hours,2.01
+FR,2010-2019,2 Growth: productivity,2.69
+FR,2010-2019,2 Growth: wage/consumption share of GDP,-0.74
+FR,2010-2019,3 Tax ratio: labour (tax+SSC / wages),0.75
+FR,2010-2019,3 Tax ratio: consumption (indirect taxes / consumption),2.56
+FR,2010-2019,3 Spending per beneficiary: pension per 65+,1.26
+FR,2010-2019,3 Spending per beneficiary: health per head,-0.66
+FR,2010-2019,3 Spending per beneficiary: sickness/disability per head,-0.34
+FR,2010-2019,3 Spending per beneficiary: other primary per head,-0.6
+FR,2010-2019,4 Cycle (AMECO cyclical component),2.38
+FR,2010-2019,5 Interest,1.02
+FR,2010-2019,6 Other taxes & non-tax revenue (mixed),-0.18
+FR,2010-2019,META d_balance,4.76
+FR,2019-2024,1 Demography (ageing),-1.83
+FR,2019-2024,2 Growth: jobs & hours,5.53
+FR,2019-2024,2 Growth: productivity,-2.02
+FR,2019-2024,2 Growth: wage/consumption share of GDP,0.13
+FR,2019-2024,3 Tax ratio: labour (tax+SSC / wages),-0.41
+FR,2019-2024,3 Tax ratio: consumption (indirect taxes / consumption),-1.42
+FR,2019-2024,3 Spending per beneficiary: pension per 65+,0.75
+FR,2019-2024,3 Spending per beneficiary: health per head,-0.98
+FR,2019-2024,3 Spending per beneficiary: sickness/disability per head,-0.16
+FR,2019-2024,3 Spending per beneficiary: other primary per head,-1.11
+FR,2019-2024,4 Cycle (AMECO cyclical component),-1.3
+FR,2019-2024,5 Interest,-0.53
+FR,2019-2024,6 Other taxes & non-tax revenue (mixed),-0.03
+FR,2019-2024,META d_balance,-3.37
+FR,2010-2024,1 Demography (ageing),-7.25
+FR,2010-2024,2 Growth: jobs & hours,5.84
+FR,2010-2024,2 Growth: productivity,2.48
+FR,2010-2024,2 Growth: wage/consumption share of GDP,-0.59
+FR,2010-2024,3 Tax ratio: labour (tax+SSC / wages),0.34
+FR,2010-2024,3 Tax ratio: consumption (indirect taxes / consumption),1.13
+FR,2010-2024,3 Spending per beneficiary: pension per 65+,2.0
+FR,2010-2024,3 Spending per beneficiary: health per head,-1.67
+FR,2010-2024,3 Spending per beneficiary: sickness/disability per head,-0.49
+FR,2010-2024,3 Spending per beneficiary: other primary per head,-1.74
+FR,2010-2024,4 Cycle (AMECO cyclical component),1.08
+FR,2010-2024,5 Interest,0.49
+FR,2010-2024,6 Other taxes & non-tax revenue (mixed),-0.21
+FR,2010-2024,META d_balance,1.39
+FR,2012-2024,1 Demography (ageing),-6.47
+FR,2012-2024,2 Growth: jobs & hours,5.49
+FR,2012-2024,2 Growth: productivity,1.78
+FR,2012-2024,2 Growth: wage/consumption share of GDP,-0.64
+FR,2012-2024,3 Tax ratio: labour (tax+SSC / wages),-0.66
+FR,2012-2024,3 Tax ratio: consumption (indirect taxes / consumption),0.36
+FR,2012-2024,3 Spending per beneficiary: pension per 65+,2.26
+FR,2012-2024,3 Spending per beneficiary: health per head,-1.51
+FR,2012-2024,3 Spending per beneficiary: sickness/disability per head,-0.38
+FR,2012-2024,3 Spending per beneficiary: other primary per head,-1.68
+FR,2012-2024,4 Cycle (AMECO cyclical component),0.83
+FR,2012-2024,5 Interest,0.58
+FR,2012-2024,6 Other taxes & non-tax revenue (mixed),-0.54
+FR,2012-2024,META d_balance,-0.59
+BE,2010-2019,1 Demography (ageing),-2.38
+BE,2010-2019,2 Growth: jobs & hours,2.77
+BE,2010-2019,2 Growth: productivity,1.62
+BE,2010-2019,2 Growth: wage/consumption share of GDP,-1.17
+BE,2010-2019,3 Tax ratio: labour (tax+SSC / wages),-0.64
+BE,2010-2019,3 Tax ratio: consumption (indirect taxes / consumption),0.3
+BE,2010-2019,3 Spending per beneficiary: pension per 65+,-0.79
+BE,2010-2019,3 Spending per beneficiary: health per head,-0.27
+BE,2010-2019,3 Spending per beneficiary: sickness/disability per head,-0.96
+BE,2010-2019,3 Spending per beneficiary: other primary per head,-0.22
+BE,2010-2019,4 Cycle (AMECO cyclical component),0.75
+BE,2010-2019,5 Interest,1.63
+BE,2010-2019,6 Other taxes & non-tax revenue (mixed),1.45
+BE,2010-2019,META d_balance,2.09
+BE,2019-2024,1 Demography (ageing),-1.4
+BE,2019-2024,2 Growth: jobs & hours,1.8
+BE,2019-2024,2 Growth: productivity,1.91
+BE,2019-2024,2 Growth: wage/consumption share of GDP,-0.26
+BE,2019-2024,3 Tax ratio: labour (tax+SSC / wages),0.7
+BE,2019-2024,3 Tax ratio: consumption (indirect taxes / consumption),-1.49
+BE,2019-2024,3 Spending per beneficiary: pension per 65+,-0.61
+BE,2019-2024,3 Spending per beneficiary: health per head,-0.89
+BE,2019-2024,3 Spending per beneficiary: sickness/disability per head,-0.66
+BE,2019-2024,3 Spending per beneficiary: other primary per head,-1.72
+BE,2019-2024,4 Cycle (AMECO cyclical component),-0.62
+BE,2019-2024,5 Interest,-0.19
+BE,2019-2024,6 Other taxes & non-tax revenue (mixed),1.09
+BE,2019-2024,META d_balance,-2.35
+BE,2010-2024,1 Demography (ageing),-3.82
+BE,2010-2024,2 Growth: jobs & hours,4.75
+BE,2010-2024,2 Growth: productivity,3.49
+BE,2010-2024,2 Growth: wage/consumption share of GDP,-1.44
+BE,2010-2024,3 Tax ratio: labour (tax+SSC / wages),0.08
+BE,2010-2024,3 Tax ratio: consumption (indirect taxes / consumption),-1.19
+BE,2010-2024,3 Spending per beneficiary: pension per 65+,-1.4
+BE,2010-2024,3 Spending per beneficiary: health per head,-1.19
+BE,2010-2024,3 Spending per beneficiary: sickness/disability per head,-1.62
+BE,2010-2024,3 Spending per beneficiary: other primary per head,-2.01
+BE,2010-2024,4 Cycle (AMECO cyclical component),0.13
+BE,2010-2024,5 Interest,1.44
+BE,2010-2024,6 Other taxes & non-tax revenue (mixed),2.53
+BE,2010-2024,META d_balance,-0.27
+BE,2012-2024,1 Demography (ageing),-3.54
+BE,2012-2024,2 Growth: jobs & hours,4.13
+BE,2012-2024,2 Growth: productivity,3.57
+BE,2012-2024,2 Growth: wage/consumption share of GDP,-1.85
+BE,2012-2024,3 Tax ratio: labour (tax+SSC / wages),-0.3
+BE,2012-2024,3 Tax ratio: consumption (indirect taxes / consumption),-1.52
+BE,2012-2024,3 Spending per beneficiary: pension per 65+,-1.07
+BE,2012-2024,3 Spending per beneficiary: health per head,-1.02
+BE,2012-2024,3 Spending per beneficiary: sickness/disability per head,-1.47
+BE,2012-2024,3 Spending per beneficiary: other primary per head,-0.25
+BE,2012-2024,4 Cycle (AMECO cyclical component),0.39
+BE,2012-2024,5 Interest,1.36
+BE,2012-2024,6 Other taxes & non-tax revenue (mixed),1.51
+BE,2012-2024,META d_balance,-0.05
+NL,2010-2019,1 Demography (ageing),-3.06
+NL,2010-2019,2 Growth: jobs & hours,3.0
+NL,2010-2019,2 Growth: productivity,1.09
+NL,2010-2019,2 Growth: wage/consumption share of GDP,-0.92
+NL,2010-2019,3 Tax ratio: labour (tax+SSC / wages),1.56
+NL,2010-2019,3 Tax ratio: consumption (indirect taxes / consumption),1.2
+NL,2010-2019,3 Spending per beneficiary: pension per 65+,0.98
+NL,2010-2019,3 Spending per beneficiary: health per head,-0.24
+NL,2010-2019,3 Spending per beneficiary: sickness/disability per head,0.57
+NL,2010-2019,3 Spending per beneficiary: other primary per head,1.43
+NL,2010-2019,4 Cycle (AMECO cyclical component),1.87
+NL,2010-2019,5 Interest,1.1
+NL,2010-2019,6 Other taxes & non-tax revenue (mixed),-1.38
+NL,2010-2019,META d_balance,7.19
+NL,2019-2024,1 Demography (ageing),-0.51
+NL,2019-2024,2 Growth: jobs & hours,2.53
+NL,2019-2024,2 Growth: productivity,0.42
+NL,2019-2024,2 Growth: wage/consumption share of GDP,-0.14
+NL,2019-2024,3 Tax ratio: labour (tax+SSC / wages),-0.01
+NL,2019-2024,3 Tax ratio: consumption (indirect taxes / consumption),-0.77
+NL,2019-2024,3 Spending per beneficiary: pension per 65+,0.13
+NL,2019-2024,3 Spending per beneficiary: health per head,-0.37
+NL,2019-2024,3 Spending per beneficiary: sickness/disability per head,-0.29
+NL,2019-2024,3 Spending per beneficiary: other primary per head,-3.25
+NL,2019-2024,4 Cycle (AMECO cyclical component),-1.22
+NL,2019-2024,5 Interest,0.07
+NL,2019-2024,6 Other taxes & non-tax revenue (mixed),0.79
+NL,2019-2024,META d_balance,-2.62
+NL,2010-2024,1 Demography (ageing),-3.63
+NL,2010-2024,2 Growth: jobs & hours,5.58
+NL,2010-2024,2 Growth: productivity,1.75
+NL,2010-2024,2 Growth: wage/consumption share of GDP,-1.05
+NL,2010-2024,3 Tax ratio: labour (tax+SSC / wages),1.54
+NL,2010-2024,3 Tax ratio: consumption (indirect taxes / consumption),0.42
+NL,2010-2024,3 Spending per beneficiary: pension per 65+,1.11
+NL,2010-2024,3 Spending per beneficiary: health per head,-0.62
+NL,2010-2024,3 Spending per beneficiary: sickness/disability per head,0.25
+NL,2010-2024,3 Spending per beneficiary: other primary per head,-2.01
+NL,2010-2024,4 Cycle (AMECO cyclical component),0.65
+NL,2010-2024,5 Interest,1.17
+NL,2010-2024,6 Other taxes & non-tax revenue (mixed),-0.58
+NL,2010-2024,META d_balance,4.57
+NL,2012-2024,1 Demography (ageing),-2.86
+NL,2012-2024,2 Growth: jobs & hours,5.17
+NL,2012-2024,2 Growth: productivity,1.31
+NL,2012-2024,2 Growth: wage/consumption share of GDP,-1.49
+NL,2012-2024,3 Tax ratio: labour (tax+SSC / wages),1.17
+NL,2012-2024,3 Tax ratio: consumption (indirect taxes / consumption),1.01
+NL,2012-2024,3 Spending per beneficiary: pension per 65+,1.15
+NL,2012-2024,3 Spending per beneficiary: health per head,-0.3
+NL,2012-2024,3 Spending per beneficiary: sickness/disability per head,0.09
+NL,2012-2024,3 Spending per beneficiary: other primary per head,-3.56
+NL,2012-2024,4 Cycle (AMECO cyclical component),1.0
+NL,2012-2024,5 Interest,1.04
+NL,2012-2024,6 Other taxes & non-tax revenue (mixed),-0.61
+NL,2012-2024,META d_balance,3.11
