@@ -7,7 +7,7 @@
 2. The auditors' estimated error rate was 3.6% in 2024 (5.6% in 2023, 4.2% in 2022), above the 2% threshold, with an adverse opinion for six years. Error means rules broken; most errors show no sign of fraud (19 suspected cases in 812 sampled transactions) and it is not a value-for-money measure. On the ECA 2024 base (EUR 191.1bn) 3.6% is about EUR 7bn.
 3. Verdict: mostly false. Size is false; waste is unproven because value for money is not measured here.
 
-**Method.** Shares are payments or commitments divided by EU27 general government expenditure (Eurostat). Per person uses 2024 EU27 population. The euro amount "in error" is illustrative: the 2024 rate applied to 2025 payments. `run.py` checks the manifest, writes the CSVs and the chart, and asserts every number quoted in the article.
+**Method.** Shares are payments or commitments divided by EU27 general government expenditure (Eurostat). Per person uses 2024 EU27 population. The euro amount "in error" is illustrative: the 2024 error rate (3.6%) applied to the ECA audited 2024 spending base (EUR 191.1bn). `run.py` checks the manifest, writes the CSVs and the chart, and asserts every number quoted in the article.
 
 **Method note.** The Council's 155.2bn payments and 199.4bn commitments include special instruments (headline excluding them: 149.6bn and 192.8bn); they match the 0.84% and 1.08% of GNI quoted. Overlap between EU transfers and national spending moves the share by under 0.1 points (1.64% to 1.69%).
 

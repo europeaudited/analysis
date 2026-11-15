@@ -180,7 +180,7 @@ def frame(fig, title, subtitle, source):
     fig.text(0.03, 0.15 / H, source, fontsize=8, color=SECOND, va="bottom", ha="left", linespacing=1.4)
 
 SRC = ("Source: Eurostat, ESSPROS, 2024. Cash and in-kind benefits.\n"
-       "Light grey: family. Mid grey: housing, social exclusion.\n"
+       "Light grey: family. Grey after unemployment: housing, exclusion.\n"
        "Means-tested benefits are 11% of EU benefits (Belgium 6%*).\n"
        "* Lower bound: no split for three Belgian benefits.")
 fig = plt.figure(figsize=(4.8, 6.2))
