@@ -51,11 +51,12 @@ On Monday the prime minister reports to the King on the talks. Three questions f
 ---
 
 **In numbers**
+
 - **12 of 17**: years since 2009 in which Belgium's deficit was above 3% of GDP; France 15, the Netherlands 5.
 - **3.8 points of GDP**: what ageing took off Belgium's balance from 2010 to 2024; 3.6 in the Netherlands.
 - **54% vs 49%**: government spending as a share of GDP, Belgium against the EU, 2025.
 - **€19bn a year by 2029, €22bn by 2031**: what a 3% deficit takes, against a €10bn target of unclear basis.
 
-**Check our work.** Data and code: https://github.com/europeaudited/analysis/tree/main/2026-11-belgium-deficit. We split the change in the balance since 2010 into its parts and project to 2035: official forecasts to 2031, our assumptions after. Spending, revenue and deficits are from Eurostat. Political timelines are from Reuters, Euronews, VRT and The Brussels Times. Limits: one simple model; defence is not in the baseline; figures after 2025 are forecasts or our assumptions.
+**Check our work.** Data and code: [github.com/europeaudited/analysis](https://github.com/europeaudited/analysis/tree/main/2026-11-belgium-deficit). We split the change in the balance since 2010 into its parts and project to 2035: official forecasts to 2031, our assumptions after. Spending, revenue and deficits are from Eurostat. Political timelines are from Reuters, Euronews, VRT and The Brussels Times. Limits: one simple model; defence is not in the baseline; figures after 2025 are forecasts or our assumptions.
 
 *Produced with AI agents, checked by a human editor. Found an error? [Open a ticket](https://github.com/europeaudited/analysis/issues/new/choose) and we will correct it in public.*
