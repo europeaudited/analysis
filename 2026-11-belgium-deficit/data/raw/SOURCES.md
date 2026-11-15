@@ -56,5 +56,8 @@ slightly when AMECO is refreshed. Confirm the vintage when you refresh.
 ## eurostat_edp_2024_2025.csv
 Eurostat `gov_10dd_edpt1` (government deficit/surplus and debt, EDP notification), unit PC_GDP, sector S13, na_item B9 (net lending (+) / borrowing (-)) and GD (gross debt), 2024 and 2025. Queried 15 Nov 2026 from https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1. Deficits are shown with their sign: negative = deficit.
 
+## eurostat_eu27_spending.csv
+Eurostat `gov_10a_main` (TE, total general government expenditure, sector S13, million euro) and `nama_10_gdp` (B1GQ, current prices, million euro) for EU27_2020, 2024 and 2025. Queried 15 Nov 2026 from the Eurostat dissemination API.
+
 ## Other figures quoted, not in a raw file
 - EU age-related spending 24.4% of GDP in 2022, projected to rise by about 1.2 points of GDP by 2070: European Commission, 2024 Ageing Report (Institutional Paper 279), as summarised by Bruegel, "Beyond retirement: a closer look at the very old" (2024).

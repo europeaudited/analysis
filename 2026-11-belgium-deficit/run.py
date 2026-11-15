@@ -474,6 +474,35 @@ def chart_deficit_history():
     style.save(fig, CHARTS / "05_deficit_history.png")
 
 
+def spending_revenue():
+    """Spending and revenue as % of GDP: Belgium, Netherlands, France 2009-2025; EU27 spending 2024-25."""
+    rows = {}
+    for line in open(cache.verified_path(RAW / "eurostat_waterfall_inputs.csv")):
+        p = line.strip().split(",")
+        rows[(p[0], p[1])] = {int(p[2]) + i: float(v) for i, v in enumerate(p[3:]) if v}
+    out = []
+    for geo in ("BE", "NL", "FR"):
+        for y in range(2009, 2026):
+            gdp = rows[("gdp_cp_meur", geo)][y]
+            out.append([geo, y, round(rows[("gov_TE", geo)][y] / gdp * 100, 1),
+                        round(rows[("gov_TR", geo)][y] / gdp * 100, 1)])
+    eu = {}
+    for r in csv.DictReader(open(cache.verified_path(RAW / "eurostat_eu27_spending.csv"))):
+        eu.setdefault(int(r["year"]), {})[r["item"]] = float(r["value"])
+    for y, v in sorted(eu.items()):
+        out.append(["EU27_2020", y, round(v["TE"] / v["GDP"] * 100, 1), ""])
+    with open(OUT / "spending_revenue.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["geo", "year", "spending_pct_gdp", "revenue_pct_gdp"])
+        w.writerows(out)
+    be = {r[1]: r for r in out if r[0] == "BE"}
+    nl = {r[1]: r for r in out if r[0] == "NL"}
+    be_rev = [be[y][3] for y in range(2010, 2026)]
+    assert be[2025][2] == 54.4 and min(be_rev) == 48.6 and max(be_rev) == 52.7, (be[2025], be_rev)
+    assert be[2010][2] == 53.9 and nl[2010][2] == 48.9 and nl[2019][2] == 42.1
+    assert [r[2] for r in out if r[0] == "EU27_2020"] == [48.9, 49.4]
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--refresh", action="store_true", help="re-download raw data first (needs internet)")
@@ -499,6 +528,7 @@ def main():
         check_key_numbers(tb, sc, rb)
     eu_context()
     chart_deficit_history()
+    spending_revenue()
     print("done: outputs/ and charts/ written")
 
 
