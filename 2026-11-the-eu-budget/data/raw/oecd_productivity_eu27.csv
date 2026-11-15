@@ -1,0 +1,4 @@
+area,year,gdp_per_hour_usd_ppp,hours_per_capita,hours_per_worker,employment_thousands,population_thousands,gdp_per_capita_const_2020ppp
+EU27_2020,2015,49.39,731.3,1631.6,198465,442785.0,43958
+EU27_2020,2019,60.12,763.7,1621.2,209894,445558.3,47588
+EU27_2020,2024,81.37,783.0,1609.4,219428,451034.2,49626

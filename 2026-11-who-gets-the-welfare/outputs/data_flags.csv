@@ -1,0 +1,11 @@
+item,flag
+provisional_2025,"ESSPROS 2025 values are Eurostat early estimates. Headline numbers use 2024. The EU27 total differs by 0.2 points of GDP between the two years, so no message changes."
+belgium_means_tested_lower_bound,"Eurostat gives no means-tested split for Belgian sickness/health care, survivors and unemployment. Belgium's 6% is a lower bound. The gap is small for the generous bound because unemployment is counted in full there."
+classification_differs,"What counts as a means-tested scheme differs by country (Denmark 36%, Ireland 26% are outliers). Cross-country gaps are partly definitional. We read them as direction, not precision."
+means_tested_is_not_poor,"Means-tested is a rule on the benefit, not a measure of who is poor. Flat-rate and insurance benefits also reach poor people, and means-tested benefits reach some who are not poor."
+function_groups,"Eurostat groups health care with sickness and survivors with old age. 'Sickness, health care and disability' is mostly health care in kind. The two ESSPROS functions 'old age' and 'survivors' are summed."
+benefits_exclude_admin,Benefits exclude administration costs and tax breaks. Spending on education and some housing and social services outside ESSPROS is also outside.
+poverty_measures,"Poverty rates are the 60%-of-median measure from the 2025 survey (incomes of 2024). ilc_li09 counts pensions as transfers (42.8% EU), ilc_li10 counts them as income (24.4%), ilc_li02 is after all transfers (16.3%). Health care in kind is not in any of the three."
+pensioner_poverty_circular,"The 65+ poverty rate is measured after pensions. It shows pensioners are on average no more likely to be poor than others, not that pensions cause that."
+generous_bound,"The 'generous bound' counts all unemployment, housing and social exclusion benefits and all means-tested benefits in other functions. It overstates the share going to poor or unemployed people."
+no_incidence,"This is spending by purpose, not by recipient income. It does not say how much of each benefit reaches the bottom fifth, which needs household survey or microsimulation data not used here."

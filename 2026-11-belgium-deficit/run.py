@@ -296,8 +296,8 @@ def chart_same_ageing_bill(tb):
     ax = style.main_axes(fig)
     x = [0, 1]; w = 0.36
     ax.set_ylim(-5.5, 6)
-    b1 = ax.bar([i - w / 2 for i in x], be, w, color=style.RED, label="Belgium")
-    b2 = ax.bar([i + w / 2 for i in x], nl, w, color=style.BLUE, label="Netherlands")
+    b1 = ax.bar([i - w / 2 for i in x], be, w, color=style.ACCENT, label="Belgium")
+    b2 = ax.bar([i + w / 2 for i in x], nl, w, color=style.SECOND, label="Netherlands")
     style.label_bars(ax, b1); style.label_bars(ax, b2)
     ax.set_xticks(x); ax.set_xticklabels(["Cost of ageing", "Change in budget balance"], fontsize=12)
     ax.axhline(0, color=style.DARK, lw=1); ax.set_yticks([])
@@ -316,7 +316,7 @@ def chart_gap_twice_plan(wit):
                       "Sources: Federal Planning Bureau; European Commission; authors' model. Government target: "
                       f"€{GOV_PLAN_BN}bn by 2029.")
     ax = style.main_axes(fig, (0.08, 0.16, 0.88, 0.58))
-    bars = ax.bar(labels, vals, color=[style.GREY, style.RED, style.LIGHT], width=0.6)
+    bars = ax.bar(labels, vals, color=[style.GREY, style.ACCENT, style.LIGHT], width=0.6)
     for r, t in zip(bars, texts):
         ax.text(r.get_x() + r.get_width() / 2, r.get_height() + 1, t, ha="center", fontsize=14, fontweight="bold")
     ax.set_yticks([]); ax.tick_params(axis="x", labelsize=11.5); ax.set_ylim(0, max(vals) * 1.2)
@@ -329,8 +329,8 @@ def chart_no_single_fix(sc):
                       "Sources: Federal Planning Bureau (baseline to 2031, extended); authors' model. Illustrative.")
     ax = fig.add_axes([0.08, 0.12, 0.66, 0.62])
     for name, col, lab in [("1 No change", style.GREY, "Current policy"),
-                           ("2 Cuts only (2% GDP spending)", style.BLUE, "Cuts only\n(~€13bn)"),
-                           ("5 Big mix (2% cuts + 1% revenue + growth)", style.RED, "Cuts + fewer tax\nbreaks + more jobs")]:
+                           ("2 Cuts only (2% GDP spending)", style.SECOND, "Cuts only\n(~€13bn)"),
+                           ("5 Big mix (2% cuts + 1% revenue + growth)", style.ACCENT, "Cuts + fewer tax\nbreaks + more jobs")]:
         d = s[s.scenario == name]
         ax.plot(d.year, d.deficit, color=col, lw=3)
         ax.text(2035.2, d.deficit.iloc[-1], lab, color=col, fontsize=10.5, va="center", fontweight="bold")
@@ -376,7 +376,7 @@ def chart_theme_detail(tb):
                       figsize=(10, 7.2))
     ax = fig.add_axes([0.30, 0.15, 0.66, 0.62])
     y = np.arange(len(GROUPS)); w = 0.27
-    for k, (geo, col) in enumerate([("BE", style.RED), ("NL", style.BLUE), ("DE", style.GREY)]):
+    for k, (geo, col) in enumerate([("BE", style.ACCENT), ("NL", style.SECOND), ("DE", style.GREY)]):
         ax.barh(y + (k - 1) * w, p[geo], height=w, color=col, label=CN[geo])
     ax.set_yticks(y); ax.set_yticklabels(GROUPS, fontsize=10); ax.invert_yaxis()
     ax.axvline(0, color=style.DARK, lw=0.8); ax.grid(axis="x", color=style.GRID); ax.tick_params(axis="x", labelsize=10)

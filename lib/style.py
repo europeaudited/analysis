@@ -1,4 +1,4 @@
-"""House chart style: red accent bar, bold one-message title, subtitle with units, source line.
+"""House chart style: blue accent bar, bold one-message title, subtitle with units, source line.
 
 Use frame() to get a figure with the house furniture, add your own axes, then save().
 """
@@ -9,13 +9,16 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-RED = "#e3120b"
-DARK = "#1a1a1a"
-GREY = "#8c8c8c"
-BLUE = "#2b6ca3"
-LIGHT = "#d9d9d9"
-PALE_RED = "#fbe3e1"
-GRID = "#eeeeee"
+ACCENT = "#1554C0"
+PALE_ACCENT = "#E3EBFA"
+DARK = "#121212"
+GREY = "#8C8C8C"
+LIGHT = "#D9D9D9"
+GRID = "#EEEEEE"
+SECOND = "#4D4D4D"  # secondary series and secondary text
+# Backward-compatible aliases from the earlier red house style. Prefer ACCENT and PALE_ACCENT.
+RED = ACCENT
+PALE_RED = PALE_ACCENT
 
 plt.rcParams.update({
     "font.family": "DejaVu Sans",
@@ -29,9 +32,9 @@ def frame(title, sub, src, figsize=(8, 6)):
     """A figure with the accent bar, title, subtitle and source line. Add axes yourself."""
     fig = plt.figure(figsize=figsize)
     fig.patches.append(plt.Rectangle((0.04, 0.975), 0.06, 0.012,
-                                     transform=fig.transFigure, color=RED))
+                                     transform=fig.transFigure, color=ACCENT))
     fig.text(0.04, 0.93, title, fontsize=17, fontweight="bold", color=DARK, va="top")
-    fig.text(0.04, 0.86, sub, fontsize=11.5, color="#444444", va="top")
+    fig.text(0.04, 0.86, sub, fontsize=11.5, color=SECOND, va="top")
     fig.text(0.04, 0.02, src, fontsize=8, color=GREY)
     return fig
 

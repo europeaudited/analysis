@@ -1,0 +1,12 @@
+item,area,year,value,unit,source,url
+nextgenerationeu_disbursements_expected,EU,2025,72,EUR bn,Commission draft budget 2025 page (estimate; borrowed funds outside the annual budget),https://www.eeas.europa.eu/delegations/montenegro/eu-budget-2025-aims-reinforce-funding-europes-priorities_en
+eca_adverse_opinion_consecutive_years,EU,2024,6,years,ECA annual report 2024 FAQ,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_materiality_threshold,EU,2024,2,% of audited spending,ECA annual report 2024 FAQ,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_audited_eu_budget_spending,EU,2024,191.1,EUR bn,ECA annual report 2024 FAQ Q1 (EU budget spending excluding recovery fund),https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_rrf_spending,EU,2024,55.9,EUR bn,ECA annual report 2024 FAQ Q1 (recovery fund payments),https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_spending_incl_rrf,EU,2024,247.0,EUR bn,ECA annual report 2024 FAQ Q1 (total incl. recovery fund),https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_suspected_fraud_cases,EU,2024,19,cases,ECA annual report 2024 FAQ Q7,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_transactions_audited_fraud_test,EU,2024,812,transactions,ECA annual report 2024 FAQ Q7,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_fraud_cases_sent_to_eppo,EU,2024,7,cases,ECA annual report 2024 FAQ Q7,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_error_rate_complex_rules,EU,2024,5.2,% of audited spending,ECA annual report 2024 FAQ Q8,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_share_spending_material_risk_min,EU,2024,66.7,% (over two thirds),ECA annual report 2024 FAQ Q8,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf

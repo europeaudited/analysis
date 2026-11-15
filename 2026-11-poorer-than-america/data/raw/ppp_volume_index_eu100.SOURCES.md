@@ -1,0 +1,3 @@
+Eurostat prc_ppp_ind (purchasing power parities and price level indices), na_item=VI_PPS_EU27_2020_HAB (volume index of real expenditure per head, EU27 = 100), pulled 2026-11-15 via the Eurostat JSON-stat API (https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_ppp_ind).
+Columns GDP_* use ppp_cat=GDP; AIC_* use ppp_cat=A01 (actual individual consumption: what households consume, including health and education paid by government).
+US and JP are Eurostat/OECD comparison-programme countries. The US AIC value for 2024 is empty in the source (not yet published at pull time), so 2023 is the latest AIC comparison. Years are not guaranteed comparable across columns: each year is its own cross-section.
