@@ -1,0 +1,11 @@
+geo,group,total_meur,share_of_benefits_pct,means_tested_meur,mt_known,pc_gdp_2024,total_pc_gdp_2024,pc_gdp_2025,total_pc_gdp_2025
+EU27_2020,old age and survivors,2319289.7,46.958,105189.62,True,12.81,27.29,12.88,27.49
+EU27_2020,"sickness, health care and disability",1813865.0,36.725,104309.19,True,10.02,27.29,10.18,27.49
+EU27_2020,family and children,434071.6,8.788,127211.98,True,2.4,27.29,2.39,27.49
+EU27_2020,unemployment,195403.9,3.956,39824.7,True,1.08,27.29,1.07,27.49
+EU27_2020,housing and social exclusion,176476.0,3.573,166416.15,True,0.97,27.29,0.97,27.49
+BE,old age and survivors,84980.3,47.788,1609.03,False,13.71,28.69,13.72,28.93
+BE,"sickness, health care and disability",67935.8,38.203,2971.08,False,10.96,28.69,11.14,28.93
+BE,family and children,12935.8,7.274,677.78,True,2.09,28.69,2.14,28.93
+BE,unemployment,5808.8,3.267,,False,0.94,28.69,0.94,28.93
+BE,housing and social exclusion,6168.3,3.469,5463.56,True,1.0,28.69,0.99,28.93

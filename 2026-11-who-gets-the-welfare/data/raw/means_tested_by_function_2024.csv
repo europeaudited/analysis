@@ -1,0 +1,17 @@
+geo,year,function,total_meur,means_tested_meur,mt_share_pct
+EU27_2020,2024,sickness_healthcare,1468195.21,9976.48,0.7
+EU27_2020,2024,disability,345669.75,94332.71,27.3
+EU27_2020,2024,old_age,2049640.59,88785.85,4.3
+EU27_2020,2024,survivors,269649.07,16403.77,6.1
+EU27_2020,2024,family_children,434071.61,127211.98,29.3
+EU27_2020,2024,unemployment,195403.87,39824.7,20.4
+EU27_2020,2024,housing,67510.59,67510.59,100.0
+EU27_2020,2024,social_exclusion,108965.45,98905.56,90.8
+BE,2024,sickness_healthcare,50044.63,,
+BE,2024,disability,17891.18,2971.08,16.6
+BE,2024,old_age,75816,1609.03,2.1
+BE,2024,survivors,9164.34,,
+BE,2024,family_children,12935.76,677.78,5.2
+BE,2024,unemployment,5808.83,,
+BE,2024,housing,1219.05,1219.05,100.0
+BE,2024,social_exclusion,4949.26,4244.51,85.8

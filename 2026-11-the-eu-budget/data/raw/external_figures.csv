@@ -1,0 +1,19 @@
+item,area,year,value,unit,source,url
+eu_budget_commitments,EU,2025,199.44,EUR bn,Council infographic 2025 EU budget (agreed),https://www.consilium.europa.eu/en/infographics/2025-eu-budget/
+eu_budget_commitments_pct_gni,EU,2025,1.08,% of EU27 GNI,Council infographic 2025 EU budget,https://www.consilium.europa.eu/en/infographics/2025-eu-budget/
+eu_budget_payments,EU,2025,155.21,EUR bn,Council infographic 2025 EU budget,https://www.consilium.europa.eu/en/infographics/2025-eu-budget/
+eu_budget_payments_pct_gni,EU,2025,0.84,% of EU27 GNI,Council infographic 2025 EU budget,https://www.consilium.europa.eu/en/infographics/2025-eu-budget/
+eu_budget_admin_payments,EU,2025,12.84,EUR bn,Council infographic 2025 EU budget (European public administration),https://www.consilium.europa.eu/en/infographics/2025-eu-budget/
+eu_budget_commitments,EU,2026,192.8,EUR bn,Council infographic 2026 EU budget,https://www.consilium.europa.eu/en/infographics/2026-eu-budget-main-areas/
+eca_error_rate,EU,2024,3.6,% of audited spending,ECA annual report 2024 FY (materiality threshold 2%; error is not fraud),https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_error_rate,EU,2023,5.6,% of audited spending,ECA annual report 2024 FY FAQ,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+eca_error_rate,EU,2022,4.2,% of audited spending,ECA annual report 2024 FY FAQ,https://www.eca.europa.eu/ECAPublications/AR-2024-FAQ/AR-2024-FAQ_EN.pdf
+nato_def_pct_gdp,USA,2014,3.7,% GDP,NATO Defence Expenditure of NATO Countries (2014-2021 release; 3.73 at 2015 prices),https://www.sipri.org/sites/default/files/2022-09/20220300_nato_defence_expenditure_of_nato_countries_2014-2021_2.pdf
+nato_def_pct_gdp,Europe+Canada,2014,1.4,% GDP,NATO press releases 2018-2019 (1.40-1.43 depending on price base),https://www.nato.int/nato_static_fl2014/assets/pdf/pdf_2019_06/20190625_pr2019-069-en.pdf
+nato_def_pct_gdp,USA,2025,3.19,% GDP,NATO Secretary General annual report 2025 (published 26 Mar 2026) as reported,https://euperspectives.eu/?p=16898
+nato_def_pct_gdp,Europe+Canada,2025,2.33,% GDP,NATO Secretary General annual report 2025 as reported,https://euperspectives.eu/?p=16898
+nato_us_share_spending,USA,2025,60,% of NATO total defence spending,NATO SG annual report 2025 as reported,https://www.airforce-technology.com/?p=267023
+nato_us_share_gdp,USA,2025,52,% of NATO allies combined GDP,NATO SG annual report 2025 as reported,https://www.airforce-technology.com/?p=267023
+nato_eac_real_growth,Europe+Canada,2025,20,% real growth vs 2024,NATO SG annual report 2025 (Reuters),https://www.al-monitor.com/originals/2026/03/nato-sees-sharp-increase-europe-and-canadas-defence-spending
+nato_allies_at_2pct,NATO,2014,3,number of allies,NATO funding page as reported,https://defencematters.eu/?p=4710
+nato_allies_at_2pct,NATO,2025,32,number of allies (all),NATO SG annual report 2025 as reported,https://defencematters.eu/?p=4710

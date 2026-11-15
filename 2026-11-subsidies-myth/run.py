@@ -110,14 +110,14 @@ def chart_hainaut(idx):
                       "Sources: JRC ARDECO; authors' calculations. Shaded: EU top-tier regional aid, 1994-2006. "
                       "Before 1995: back-cast data.")
     ax = style.main_axes(fig, (0.08, 0.12, 0.86, 0.62))
-    ax.axvspan(1994, 2006, color=style.PALE_RED)
+    ax.axvspan(1994, 2006, color=style.PALE_ACCENT)
     h = idx["Hainaut"]
-    ax.plot(h.index, h, color=style.RED, lw=3.5)
+    ax.plot(h.index, h, color=style.ACCENT, lw=3.5)
     for y in (1980, 1993, 2006, 2024):
         v = h.loc[y]
-        ax.scatter(y, v, color=style.RED, zorder=3)
+        ax.scatter(y, v, color=style.ACCENT, zorder=3)
         ax.text(y, v + 1.2, f"{v:.0f}", ha="center", fontsize=12, fontweight="bold")
-    ax.text(2000, 77.5, "EU aid", ha="center", fontsize=10.5, color=style.RED)
+    ax.text(2000, 77.5, "EU aid", ha="center", fontsize=10.5, color=style.ACCENT)
     ax.set_ylim(55, 80); ax.grid(axis="y", color=style.GRID); ax.tick_params(labelsize=10)
     style.save(fig, CHARTS / "04_hainaut.png")
 
@@ -129,9 +129,9 @@ def chart_vs_neighbours(idx):
                       "Rest of Wallonia = Liege, Luxembourg, Namur. Shaded: EU Objective 1 for Hainaut, 1994-2006.",
                       figsize=(10, 6))
     ax = style.main_axes(fig, (0.08, 0.14, 0.88, 0.60))
-    ax.axvspan(1994, 2006, color=style.PALE_RED)
-    for c, col, lab in [("Flanders", style.BLUE, "Flanders"), ("Liege", "#5b9a5b", "Liege"),
-                        ("Rest of Wallonia ex BW", style.GREY, "Rest of Wallonia"), ("Hainaut", style.RED, "Hainaut")]:
+    ax.axvspan(1994, 2006, color=style.PALE_ACCENT)
+    for c, col, lab in [("Flanders", style.SECOND, "Flanders"), ("Liege", "#5b9a5b", "Liege"),
+                        ("Rest of Wallonia ex BW", style.GREY, "Rest of Wallonia"), ("Hainaut", style.ACCENT, "Hainaut")]:
         ax.plot(idx.index, idx[c], color=col, lw=3 if c == "Hainaut" else 1.8, label=lab)
     ax.axhline(100, color=style.DARK, lw=0.6)
     ax.grid(axis="y", color=style.GRID); ax.tick_params(labelsize=10)

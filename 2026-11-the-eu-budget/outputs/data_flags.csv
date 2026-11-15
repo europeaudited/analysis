@@ -1,0 +1,15 @@
+item,flag
+adopted_not_outturn,"The 2025 EU budget figures are the adopted budget (commitments 199.44bn, payments 155.21bn), not final outturn. Amendments during the year may change them."
+ngeu_off_budget,"NextGenerationEU (up to about 72bn, may include loans that are financing, not spending) is borrowed and sits outside the annual budget. The Commission expected about 72bn of disbursements in 2025 (an estimate, from a Commission page about the draft budget). With it, EU money is about 2.4% of public spending, not 1.7%."
+overlap,National general government spending includes some EU funds that governments receive and spend. The EU share is therefore approximate and the two figures are not strictly additive.
+population_year,The cached population file has no 2025 value. Per-person figures use 2024 EU27 population (451.0m).
+error_not_waste,The ECA error rate measures spending that broke EU or national rules. The ECA says error is not fraud and most errors do not signal fraud. It is not a measure of waste or value for money.
+error_amount,"About 7bn in error is our calculation: the ECA 2024 rate (3.6%) times the ECA's 2024 EU budget spending (191.1bn, excluding the recovery fund). The ECA FAQ gives no euro amount. The 2025 payments x 3.6% (5.6bn) is kept in headline_numbers.csv only."
+outturn_base,"The ECA's 2024 spending base (191.1bn; 247.0bn with the recovery fund) is above 2025 adopted payments (155.2bn). Reason not verified. On that base the share of 2024 national spending is 2.2%, or 2.8% with the recovery fund. Treat 1.7% as the low end."
+overlap_bounds,Overlap between EU transfers and national spending moves the payments share between about 1.6% and 1.7% (2.4% to 2.5% with NextGenerationEU): under 0.1 points.
+eurostat_provisional,Eurostat 2025 totals may be a first release; the cached file has no status flag.
+special_instruments,The Council's 155.21bn payments and 199.44bn commitments include special instruments; the headline excluding them is 149.6bn and 192.8bn. We use the larger figures. 155.2 is consistent with the 0.84% of GNI quoted.
+admin_share,"Administration is 12.84bn in the Council's 'European public administration' heading, 8% of payments. It covers all institutions' staff, pensions and buildings. Another source quotes about 6%, from a different base; not reconciled here."
+gni_vs_gdp,Council shares are of GNI (0.84% payments); our public-spending shares use Eurostat GDP and spending. Both are shown and labelled.
+belgium,"Belgium hosts several institutions. No net-contribution figure is sourced here, so none is given."
+hand_entered,"NextGenerationEU 72bn, the sixth adverse opinion and the 2% threshold are in eu_budget_extra_figures.csv (read in the cited pages), not in the shared inbox file."

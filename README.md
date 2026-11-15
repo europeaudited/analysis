@@ -12,6 +12,9 @@ We say where the model works and where it does not. We test claims, not people o
 |---|---|---|---|
 | Belgium's budget row is about the wrong number | "Ageing is why Belgium can't balance its books" | Mostly false | [2026-11-belgium-deficit](2026-11-belgium-deficit/) |
 | Aid came, the gap stayed | "Subsidies and public spending drive growth" | Mixed | [2026-11-subsidies-myth](2026-11-subsidies-myth/) |
+| The EU trails America by a quarter to a third | "Europeans are about 30% poorer than Americans" | Mostly true | [2026-11-poorer-than-america](2026-11-poorer-than-america/) |
+| Welfare mostly pays for old age and health, not unemployment | "Social spending mostly goes to the poor and the unemployed" | Mostly false | [2026-11-who-gets-the-welfare](2026-11-who-gets-the-welfare/) |
+| The EU budget is small, not proven wasteful | "The EU budget is huge and wasteful" | Mostly false | [2026-11-the-eu-budget](2026-11-the-eu-budget/) |
 
 Verdict scale: True, Mostly true, Mixed, Mostly false, False, Unproven. Definitions are in [METHODOLOGY.md](METHODOLOGY.md).
 
