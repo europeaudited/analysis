@@ -416,6 +416,25 @@ def check_key_numbers(tb, sc, rb):
         raise SystemExit(f"Key numbers changed: {bad}")
 
 
+def eu_context():
+    """EU context for the post: how many EU27 countries breach 3% and 100% in 2025."""
+    rows = list(csv.DictReader(open(cache.verified_path(RAW / "eurostat_edp_2024_2025.csv"))))
+    members = [r for r in rows if r["geo"] not in ("EU27_2020", "EA20")]
+    assert len(members) == 27
+    over3 = sorted(r["geo"] for r in members if float(r["deficit_2025"]) < -3.0)
+    over100 = sorted(r["geo"] for r in members if float(r["debt_2025"]) > 100.0)
+    be = next(r for r in rows if r["geo"] == "BE")
+    with open(OUT / "eu_context_2025.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["measure", "value", "countries"])
+        w.writerow(["eu27_deficit_above_3pct_2025", len(over3), " ".join(over3)])
+        w.writerow(["eu27_debt_above_100pct_2025", len(over100), " ".join(over100)])
+        w.writerow(["be_deficit_2025", be["deficit_2025"], "BE"])
+        w.writerow(["be_debt_2025", be["debt_2025"], "BE"])
+    assert len(over3) == 10 and len(over100) == 5, (over3, over100)
+    assert float(be["deficit_2025"]) == -5.2 and float(be["debt_2025"]) == 108.1
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--refresh", action="store_true", help="re-download raw data first (needs internet)")
@@ -439,6 +458,7 @@ def main():
     print(wit.to_string(index=False))
     if not args.refresh:
         check_key_numbers(tb, sc, rb)
+    eu_context()
     print("done: outputs/ and charts/ written")
 
 

@@ -52,3 +52,9 @@ slightly when AMECO is refreshed. Confirm the vintage when you refresh.
 - German real GDP is identical in 2023 and 2024 in the cached file (3,089,797.2). It looks like a filled value.
 - Belgian survivors' spending is identical in 2020 and 2021 (7,538.8).
 - Working-age population is back-calculated from an employment rate rounded to one decimal.
+
+## eurostat_edp_2024_2025.csv
+Eurostat `gov_10dd_edpt1` (government deficit/surplus and debt, EDP notification), unit PC_GDP, sector S13, na_item B9 (net lending (+) / borrowing (-)) and GD (gross debt), 2024 and 2025. Queried 15 Nov 2026 from https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1. Deficits are shown with their sign: negative = deficit.
+
+## Other figures quoted, not in a raw file
+- EU age-related spending 24.4% of GDP in 2022, projected to rise by about 1.2 points of GDP by 2070: European Commission, 2024 Ageing Report (Institutional Paper 279), as summarised by Bruegel, "Beyond retirement: a closer look at the very old" (2024).
