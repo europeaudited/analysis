@@ -1,0 +1,33 @@
+name: Suggest an idea
+description: Suggest a claim about Europe's social model for us to test.
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: The claim people make
+      description: Write it the way people actually say it, in quotes.
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where do you hear it?
+      description: Politicians, media, social media, at work. A link helps.
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: What data could test it?
+      description: Name the dataset or publisher if you know it.
+    validations:
+      required: false
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      description: Which country or countries does the claim concern?
+    validations:
+      required: true
